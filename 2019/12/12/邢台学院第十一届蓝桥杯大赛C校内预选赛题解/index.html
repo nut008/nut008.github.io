@@ -46,14 +46,20 @@
   };
 </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="填空题 第一题">
+<meta property="og:type" content="article">
 <meta property="og:title" content="邢台学院第十一届蓝桥杯大赛C校内预选赛题解">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E9%82%A2%E5%8F%B0%E5%AD%A6%E9%99%A2%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%A7%E8%B5%9BC%E6%A0%A1%E5%86%85%E9%A2%84%E9%80%89%E8%B5%9B%E9%A2%98%E8%A7%A3&#x2F;index.html">
 <meta property="og:site_name" content="lxd的博客">
+<meta property="og:description" content="填空题 第一题">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;pai1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;pai2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;pai3.png">
 <meta property="article:published_time" content="2019-12-12T03:11:09.000Z">
-<meta property="article:modified_time" content="2019-12-12T03:11:09.807Z">
+<meta property="article:modified_time" content="2019-12-16T13:22:59.240Z">
 <meta property="article:author" content="Xdong Liu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;pai1.png">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/12/%E9%82%A2%E5%8F%B0%E5%AD%A6%E9%99%A2%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%A7%E8%B5%9BC%E6%A0%A1%E5%86%85%E9%A2%84%E9%80%89%E8%B5%9B%E9%A2%98%E8%A7%A3/">
 
@@ -191,6 +197,13 @@
 
               <time title="Created: 2019-12-12 11:11:09" itemprop="dateCreated datePublished" datetime="2019-12-12T11:11:09+08:00">2019-12-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-16 21:22:59" itemprop="dateModified" datetime="2019-12-16T21:22:59+08:00">2019-12-16</time>
+              </span>
 
           
 
@@ -203,7 +216,118 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="填空题"><a href="#填空题" class="headerlink" title="填空题"></a>填空题</h2><hr>
+<p><span style="color:red;">第一题</span></p>
+<a id="more"></a>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>在计算机存储中，15.125GB是多少MB？</p>
+</blockquote>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote>
+<p>打开计算机计算 15.125 X 1024</p>
+</blockquote>
+<hr>
+<p><span style="color:red;">第二题</span></p>
+<h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>一个数被称为质数是指除开1和它本身两个约数外，没有其他的约数。不超过10000的数中，最大的质数是多少？</p>
+</blockquote>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isprime</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> mid = n/<span class="number">2</span> ;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;mid; i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(n%i==<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10000</span>;i&gt;<span class="number">1</span>;i--)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(isprime(i))&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<hr>
+<p><span style="color:red;">第三题</span></p>
+<h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>一棵包含2019个结点的树，最多包含多少个叶结点？（读了三遍才确定我没看错，没指定几个叉）</p>
+</blockquote>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><blockquote>
+<p>2018</p>
+</blockquote>
+<hr>
+<p><span style="color:red;">第四题</span></p>
+<h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>一棵10层的二叉树，最多包含多少个结点？</p>
+</blockquote>
+<h3 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>套公式 2^n - 1</p>
+</blockquote>
+<hr>
+<p><span style="color:red;">第五题</span></p>
+<h3 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>给定一个单词，请使用凯撒密码将这个单词加密。（字母向后偏移三位，a-&gt;d,b-&gt;e,…,z-&gt;c)  </p>
+</blockquote>
+<p><strong>输入格式：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;输入一行，包含一个单词，单词中只包含小写英文字母。</p>
+</blockquote>
+<p><strong>输出格式：</strong>  </p>
+<blockquote>
+<p>&emsp;&emsp;输出一行，表示加密后的密文。</p>
+</blockquote>
+<p>样例输入：<br>lanqiao<br>样例输出：<br>odqtldr  </p>
+<p><strong>评测用例规模与约定：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;对于所有评测用例，单词中的字母个数不超过100。</p>
+</blockquote>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">200</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	gets(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(a);i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		a[i]=(a[i]%<span class="number">97</span>+<span class="number">3</span>)%<span class="number">26</span>+<span class="number">97</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">//puts(a);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>,a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<blockquote>
+<p>提示：为什么没有用puts输出，避免因为最后输出一个回车导致整体错误</p>
+</blockquote>
+<hr>
+<p><span style="color:red;">第五题</span></p>
+<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><blockquote>
+<p>给定一个单词，单词中可能包含大小写字母，请安第一个字母大写，后边字母小写的方式输出。</p>
+</blockquote>
+<p><strong>输入格式：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;输入一行，包含一个单词，单词中只包含大写或小写英文字母。</p>
+</blockquote>
+<p><strong>输出格式：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;输出单词在段首的形式，第一个字母大写，其他字母小写</p>
+</blockquote>
+<p>样例输入<br>LanQiao<br>样例输出<br>Lanqiao<br><strong>评测用例规模与约定：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;对于所有评测用例，单词中的字母不超过1000。</p>
+</blockquote>
+<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//#include&lt;ctype.h&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">200</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	gets(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	a[<span class="number">0</span>]=(a[<span class="number">0</span>]%<span class="number">97</span>)%<span class="number">65</span>+<span class="number">65</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">//a[0]=toupper(a[0]);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">//此问题还可以用if判断操作，笔者在这里不再演示</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="built_in">strlen</span>(a);i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		a[i]=(a[i]%<span class="number">97</span>)%<span class="number">65</span>+<span class="number">97</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//a[i]=tolower(a[i]);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>,a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<blockquote>
+<p>详解：<br>主要是这一步操作<br>a[0]=(a[0]%97)%65+65;(等价于其下面注释的函数)<br>假设a[0]是大写字母(ASCII 65+) 理论上是不用动的 a[0]与97取余后还是它自己，再与65取余后就是就是相对65的偏移量(ASCII) 再加65还是它自己<br>假设a[0]是小写字母(ASCII 97+)  a[0]与97取余后就是相对97的偏移量 (ASCII) 由于小于26所以跟65取余是它本身 再加65 就变成此字母大写时的ASCII值</p>
+</blockquote>
+<hr>
+<p><span style="color:red;">第六题</span></p>
+<h3 id="问题描述：-1"><a href="#问题描述：-1" class="headerlink" title="问题描述："></a>问题描述：</h3><blockquote>
+<p>小明非常不喜欢2，包括那些数位上包含数字2的数。如果一个数的数位不包含2，小明将称它为洁净数。<br>请问在整数1至n中，洁净数有多少个？</p>
+</blockquote>
+<p><strong>输入格式：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;输入一行，包含一个整数n。</p>
+</blockquote>
+<p><strong>输出格式：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;输出一行包含一个整数，表示答案。</p>
+</blockquote>
+<p>样例输入<br>30<br>样例输出<br>18<br><strong>评测用例规模与约定：</strong></p>
+<blockquote>
+<p>&emsp;&emsp;对于40%的评测用例，1&lt;=n&lt;=10000。<br>&emsp;&emsp;对于80%的评测用例，1&lt;=n&lt;=100000。<br>&emsp;&emsp;对于100%的评测用例，1&lt;=n&lt;=1000000。</p>
+</blockquote>
+<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h3><p>题解方法1(暴力)：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">jiejing</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,flag=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++,flag=<span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=i%<span class="number">10</span>,k=i;k&gt;<span class="number">0</span>;j=k%<span class="number">10</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(j==<span class="number">2</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">				flag=<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">break</span>;	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			k=k/<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		sum+=flag;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> sum;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> n,sum=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,n-jiejing(n));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>笔者当时产生了另一种思路，相比来说算法复杂度非常低。<del>虽然因为去重错误导致爆0</del><br>给一个数判断比它小的数，不含2的个数。可以看成排列组合。 </p>
+</blockquote>
+<p><strong>思路1</strong></p>
+<blockquote>
+<p>第一种<br>用4510举例，可以看成4000+500+10，计算4000后三位含有2的组合。计算有一个2的情况+计算两个2的情况+计算3个2的情况,所以设总位数为n+1，求和公式为（含2的组合数量）：<img src="/images/pai1.png" alt="alt"><br>第二种（比较麻烦笔者当初没有仔细思考这个排列组合问题，所以用的这个方法）<br>用4510举例，可以看成4000+500+10，先计算4000内含有2的组合。全排列后三位为：3X10^2种组合。由于当出现n(n&gt;1)个2的组合时会多计算n-1倍，例如22X（x为0-9）定最左边为2时会计算为10个组合，当定中间为2时又会当成10中组合，此情况多计算了10，但是相应的减10的话又难以计算（笔者找不到规律），可以反着想第一种思路，设总位数为n+1，去重公式为（含2的组合数量）：<img src="/images/pai2.png" alt="alt"></p>
+</blockquote>
+<p><strong>思路2</strong></p>
+<blockquote>
+<p>以上两种方法编程比较难实现，高中比较典型的排列组合题（当年的送分题）。不多说了，公式（不含2的组合）：<img src="/images/pai3.png" alt="alt"></p>
+</blockquote>
+<p>题解方法2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">#include&lt;string.h&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">#include&lt;math.h&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">char a[1000];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">int jiejing(int n)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	int mumber,sum,sums;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	char b[1000];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	sprintf(b,&quot;%d&quot;,n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	int head &#x3D; b[0]-48;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	if(strlen(b)&gt;1)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		mumber &#x3D; strlen(b)-1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		sum &#x3D; int(pow(9,mumber));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		if(head&gt;2)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			sums&#x3D;sum*(head-1);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			sums&#x3D;sum*head;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		sscanf(&amp;b[1],&quot;%d&quot;,&amp;n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		if(head&#x3D;&#x3D;2)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">			return sums-1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">		if(n&#x3D;&#x3D;0)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			return sums;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">			return (sums+jiejing(n));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">	if(strlen(b)&#x3D;&#x3D;1)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">		if(head&gt;2)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">			return head-1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">			return 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">	return 10000000;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">int main()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">	int n;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">	printf(&quot;%d&quot;,jiejing(n));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">	return 0;	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<blockquote>
+<p>提示：由于没有找到提交系统，以上两种方法代码只对比了1-100000的输出结果。（方法2在1-1000000的循环内执行时间2秒左右，方法1在1-100000的循环内一分钟内未运行完毕，我没有少打0哦）</p>
+</blockquote>
+<p><strong><p align="right">由于目前没有评论功能，有错误请联系QQ：2512607830</p></strong></p>
+
     </div>
 
     
@@ -281,6 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#填空题"><span class="nav-number">1.</span> <span class="nav-text">填空题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-1"><span class="nav-number">1.3.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-1"><span class="nav-number">1.4.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-2"><span class="nav-number">1.5.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-2"><span class="nav-number">1.6.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-3"><span class="nav-number">1.7.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-4"><span class="nav-number">1.8.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-5"><span class="nav-number">1.9.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-3"><span class="nav-number">1.10.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述："><span class="nav-number">1.11.</span> <span class="nav-text">问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-4"><span class="nav-number">1.12.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述：-1"><span class="nav-number">1.13.</span> <span class="nav-text">问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-5"><span class="nav-number">1.14.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
