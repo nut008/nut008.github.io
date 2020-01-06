@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Nut.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Nut.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="c常用函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c&#x2F;c++常用函数">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;04&#x2F;c_c++%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0&#x2F;index.html">
+<meta property="og:site_name" content="坚果博客">
+<meta property="og:description" content="c常用函数">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-04T08:03:09.000Z">
+<meta property="article:modified_time" content="2020-01-06T02:37:47.411Z">
+<meta property="article:author" content="Xdong-Liu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/01/04/c_c++%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>c/c++常用函数 | 坚果博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">坚果博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/04/c_c++%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xdong-Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="坚果博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          c/c++常用函数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-04 16:03:09" itemprop="dateCreated datePublished" datetime="2020-01-04T16:03:09+08:00">2020-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-06 10:37:47" itemprop="dateModified" datetime="2020-01-06T10:37:47+08:00">2020-01-06</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="c常用函数"><a href="#c常用函数" class="headerlink" title="c常用函数"></a><p style="text-align:center;color:red">c常用函数</p></h2><a id="more"></a>
+<!-- ### <blockquote class="blockquote-center"><p>stdio.h函数库</p>
+</blockquote> -->
+<h3 id=""><a href="#" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>blah blah blah</p>
+</blockquote></h3><h4 id="字符输入输出函数"><a href="#字符输入输出函数" class="headerlink" title="字符输入输出函数"></a>字符输入输出函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">getchar</td>
+<td style="text-align:left">int getchar()</td>
+<td style="text-align:left">从键盘缓冲区读取一个字符。</td>
+<td style="text-align:left">返回用户输入的字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">fgetc和getc</td>
+<td style="text-align:left">int fgetc(FILE *stream)<br>int getc(FILE *stream)</td>
+<td style="text-align:left">这两个函数基本等价，从目标位置读取字符(参数为stdin时从终端读取)。</td>
+<td style="text-align:left">成功返回读取的字符，错误或文件尾返回EOF</td>
+</tr>
+<tr>
+<td style="text-align:left">gets</td>
+<td style="text-align:left">char *gets(int *str)</td>
+<td style="text-align:left">将输入的字符串放到str数组里</td>
+<td style="text-align:left">操作成功返回数组指针，否在返回NULL</td>
+</tr>
+<tr>
+<td style="text-align:left">fgets</td>
+<td style="text-align:left">char *fgets(char *str,int num,FILE *stream)</td>
+<td style="text-align:left">从目标位置读取num-1个字符或遇到回车，将读取的字符存到str中</td>
+<td style="text-align:left">操作成功返回str，遇到结束符返回空指针，若出错内容不确定。</td>
+</tr>
+<tr>
+<td style="text-align:left">putchar</td>
+<td style="text-align:left">int putchar(int ch)</td>
+<td style="text-align:left">输出ch字符</td>
+<td style="text-align:left">成功时返回字符ch，否则返回EOF。</td>
+</tr>
+<tr>
+<td style="text-align:left">fputc和putc</td>
+<td style="text-align:left">int fputc(int ch,FILE *stream)<br>int putc(int ch,FILE *stream)</td>
+<td style="text-align:left">输出一个字符到目标位置</td>
+<td style="text-align:left">成功返回写入的字符，否则返回EOF（stdout输入到屏幕）。</td>
+</tr>
+<tr>
+<td style="text-align:left">puts</td>
+<td style="text-align:left">int puts(const char *str)</td>
+<td style="text-align:left">在屏幕输出str指向的字符串</td>
+<td style="text-align:left">成功返回非负值，失败返回EOF</td>
+</tr>
+<tr>
+<td style="text-align:left">fputs</td>
+<td style="text-align:left">int fputs(const char *str,FILE *stream)</td>
+<td style="text-align:left">将str输出到目标位置</td>
+<td style="text-align:left">成功返回一个非负数，失败返回EOF</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>标准输入文件（stdin），通常对应终端的键盘；标准输出文件（stdout）和标准错误输出文件（stderr），这两个文件都对应终端的屏幕。</p>
+</blockquote>
+<hr>
+<h4 id="数据块输入-输出函数"><a href="#数据块输入-输出函数" class="headerlink" title="数据块输入/输出函数"></a>数据块输入/输出函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">fread</td>
+<td style="text-align:left">int fread(void *buffer,int size,int count,FILE *stream)</td>
+<td style="text-align:left">从目标位置读取count个字段，每个字段大小size个字节，存到buffer中</td>
+<td style="text-align:left">返回实际读取的字段个数</td>
+</tr>
+<tr>
+<td style="text-align:left">fwrite</td>
+<td style="text-align:left">int fwrite(void *buffer,int size,int count,FILE *stream)</td>
+<td style="text-align:left">将buffer内容输出count个字段，每个字段大小size个字节到目标位置</td>
+<td style="text-align:left">返回实际写入的字段个数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h4 id="格式化输入-输出函数"><a href="#格式化输入-输出函数" class="headerlink" title="格式化输入/输出函数"></a>格式化输入/输出函数</h4><h5 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h5><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">格式控制符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">d或i</td>
+<td style="text-align:left">带符号的十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left">无符号八进制整数</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">无符号十六进制整数</td>
+</tr>
+<tr>
+<td style="text-align:left">u</td>
+<td style="text-align:left">无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:left">f</td>
+<td style="text-align:left">小数形式单、双精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">e或E</td>
+<td style="text-align:left">指数形式的单、双精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">g或G</td>
+<td style="text-align:left">以%f或%e形式输出浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">单个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">p</td>
+<td style="text-align:left">输出一个指针</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">flags</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">在给定的域宽内靠左端输出</td>
+<td style="text-align:left">‘%-10d’左对齐输出宽度为10（’%10d’右对齐）</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">强制在正整数前输出+，负数前输出-</td>
+<td style="text-align:left">‘%+d’(与对齐一起使用’%+-10d’)</td>
+</tr>
+<tr>
+<td style="text-align:left">#</td>
+<td style="text-align:left">使用o,x,X时加前导0,0x,0X输出</td>
+<td style="text-align:left">‘%#x’(与对齐一起使用’%#-10x’)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">width</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">m</td>
+<td style="text-align:left">输出字段的宽度，如果数据的宽度小于m，则左端补上空格，否则按照实际位数输出</td>
+<td style="text-align:left">‘%-10d’左对齐输出宽度为10（’%10d’右对齐）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">precision</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">n</td>
+<td style="text-align:left">输出字段的宽度，如果数据的宽度小于m，则左端补上空格，否则按照实际位数输出</td>
+<td style="text-align:left">‘%-10d’左对齐输出宽度为10（’%10d’右对齐）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h5><h5 id="sprintf"><a href="#sprintf" class="headerlink" title="sprintf"></a>sprintf</h5><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">int sprintf(char *buffer,const char * format[,argument])</td>
+<td style="text-align:left">将format指向的格式化数据输出到buffer指向的数组中</td>
+<td style="text-align:left">返回输出的字符的个数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf"></a>sscanf</h5><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">int sscanf(char *buffer,const char * format[,argument])</td>
+<td style="text-align:left">从buffer指向的字符串中读取format指定格式的数据，存储到argument中</td>
+<td style="text-align:left">返回输入数据的项数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="其他的文件输入输出函数"><a href="#其他的文件输入输出函数" class="headerlink" title="其他的文件输入输出函数"></a>其他的文件输入输出函数</h5><p>略</p>
+<hr>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>ctype.h函数库</p>
+</blockquote></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">isalnum</td>
+<td style="text-align:left">int isalnum(int ch)</td>
+<td style="text-align:left">判断ch是否为十进制数或字母</td>
+<td style="text-align:left">若ch是英文字母或数字字符，返回非0值，否在返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isalpha</td>
+<td style="text-align:left">int isalpha(int ch)</td>
+<td style="text-align:left">判断ch是否为英文字母</td>
+<td style="text-align:left">若ch为(‘A’~’Z’,’a’~’z’)返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isdigit</td>
+<td style="text-align:left">int isdigit(int ch)</td>
+<td style="text-align:left">判断ch是否为数字字符</td>
+<td style="text-align:left">若ch为(‘0’~’9’)返回非0值，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">iscntrl</td>
+<td style="text-align:left">int iscntrl(int ch)</td>
+<td style="text-align:left">判断ch是否是控制字符(ASCII码0~31，或0x7f)</td>
+<td style="text-align:left">若ch是控制字符返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isgraph</td>
+<td style="text-align:left">int isgraph(int ch)</td>
+<td style="text-align:left">判断ch是否可打印字符(不包括空格)</td>
+<td style="text-align:left">若ch是可打印字符返回非0值，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">islower</td>
+<td style="text-align:left">int islower(int ch)</td>
+<td style="text-align:left">判断ch是否是小写英文字母</td>
+<td style="text-align:left">若ch是小写英文字母返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isupper</td>
+<td style="text-align:left">int siupper(int ch)</td>
+<td style="text-align:left">判断ch是否是大写的英文字母</td>
+<td style="text-align:left">若ch是大写英文字母返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isprint</td>
+<td style="text-align:left">int isprint(int ch)</td>
+<td style="text-align:left">判断ch是否是可打印字符（包括空格）</td>
+<td style="text-align:left">若ch是可打印字符返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">ispunct</td>
+<td style="text-align:left">int ispunct(int ch)</td>
+<td style="text-align:left">判断ch是否是标点符号</td>
+<td style="text-align:left">若ch是标点符号返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isspace</td>
+<td style="text-align:left">int isspace(int ch)</td>
+<td style="text-align:left">判断ch是否是空白符(\t,\n,\v,\f,\r,空格)</td>
+<td style="text-align:left">若ch是空白符返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">isxdigit</td>
+<td style="text-align:left">int isxdigit(int ch)</td>
+<td style="text-align:left">判断ch是否是十六进制数字</td>
+<td style="text-align:left">若ch是十六进制数字对应字符返回非0，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">tolower</td>
+<td style="text-align:left">int tolower(int ch)</td>
+<td style="text-align:left">若ch是’A’~’Z’的大写字母，此函数会返回ch小写形式</td>
+<td style="text-align:left">若ch是大写字母返回其小写字母，否则返回原字符</td>
+</tr>
+<tr>
+<td style="text-align:left">toupper</td>
+<td style="text-align:left">int toupper(int ch)</td>
+<td style="text-align:left">若ch是’a’~’z’的小写字母，此函数会返回ch大写形式</td>
+<td style="text-align:left">若ch是小写字母返回其大写字母，否则返回原字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>string.h函数库</p>
+</blockquote></h3><h4 id="字符串比较函数"><a href="#字符串比较函数" class="headerlink" title="字符串比较函数"></a>字符串比较函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">memcmp</td>
+<td style="text-align:left">int memcmp(const void *buf1,const void *buf2,unsigned count)</td>
+<td style="text-align:left">比较buf1和buf2的前count个字符的大小</td>
+<td style="text-align:left">buf1比buf2，小返回小于0，等返回0，大返回大于0</td>
+</tr>
+<tr>
+<td style="text-align:left">strcmp</td>
+<td style="text-align:left">int strcmp(const char *str1,const char *str2)</td>
+<td style="text-align:left">比较字符串str1和字符串str2大小</td>
+<td style="text-align:left">str1=str2返回0，str1&gt;str2返回一个大于0的值，str1&lt;str2返回一个小于0的值</td>
+</tr>
+<tr>
+<td style="text-align:left">strncmp</td>
+<td style="text-align:left">int strncmp(const char *str1,const char *str2)</td>
+<td style="text-align:left">与memcmp类似，二者区别：memcmp不检测’\0’，有可能越界</td>
+<td style="text-align:left">str1=str2返回0，’&lt;’返回一个小于0的值，’&gt;’返回一个大于0的值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="字符串复制函数"><a href="#字符串复制函数" class="headerlink" title="字符串复制函数"></a>字符串复制函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">memcpy</td>
+<td style="text-align:left">void *memcpy(void *dest,const void *source,unsigned count)</td>
+<td style="text-align:left">从source指向字符中复制count个字节到dest中</td>
+<td style="text-align:left">返回目标数组首地址</td>
+</tr>
+<tr>
+<td style="text-align:left">memmove</td>
+<td style="text-align:left">void *memmove(void *dest,const void *source,unsigned count)</td>
+<td style="text-align:left">从source数组中复制count个字节到dest数组中</td>
+<td style="text-align:left">返回目标数组首地址</td>
+</tr>
+<tr>
+<td style="text-align:left">strcpy</td>
+<td style="text-align:left">char *strcpy(char *dest,const char *source)</td>
+<td style="text-align:left">将source指向的字符串复制到dest数组中包括终结符</td>
+<td style="text-align:left">返回目标字符串首地址</td>
+</tr>
+<tr>
+<td style="text-align:left">strncpy</td>
+<td style="text-align:left">char *strncpy(char *dest,const char *source,unsigned count)</td>
+<td style="text-align:left">将source指向的字符串复制count个字符到dest数组中包括终结符</td>
+<td style="text-align:left">返回目标字符串首地址</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="字符串连接函数"><a href="#字符串连接函数" class="headerlink" title="字符串连接函数"></a>字符串连接函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">strcat</td>
+<td style="text-align:left">char *strcat(char *dest,const char *source)</td>
+<td style="text-align:left">将source指向的字符串连接到dest指向的字符串末尾</td>
+<td style="text-align:left">返回目标字符串首地址</td>
+</tr>
+<tr>
+<td style="text-align:left">strncat</td>
+<td style="text-align:left">char *strncat(char *dest,const char *source,unsigned count)</td>
+<td style="text-align:left">将source指向的前count个字符连接到dest指向的字符串末尾</td>
+<td style="text-align:left">返回目标字符串首地址</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="字符串查找函数"><a href="#字符串查找函数" class="headerlink" title="字符串查找函数"></a>字符串查找函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">memchr</td>
+<td style="text-align:left">void *memchr(const void *buffer,int c,unsigned count)</td>
+<td style="text-align:left">从buffer指向的前count个字节中查找第一次值为c的数据</td>
+<td style="text-align:left">找到c返回指向c的指针，否则返回空</td>
+</tr>
+<tr>
+<td style="text-align:left">strchr</td>
+<td style="text-align:left">char *strchr(const char *str,int ch)</td>
+<td style="text-align:left">查找str指向的字符串中第一次出现的字符ch</td>
+<td style="text-align:left">找到ch返回指向ch的指针，否则返回空</td>
+</tr>
+<tr>
+<td style="text-align:left">strstr</td>
+<td style="text-align:left">char *strstr(const char *str1,const char *str2)</td>
+<td style="text-align:left">从str1指向的字符串中查找第一次出现的字符串str2</td>
+<td style="text-align:left">查找成功返回str2在str1中出现的位置，否则返回NULL</td>
+</tr>
+<tr>
+<td style="text-align:left">strtok</td>
+<td style="text-align:left">char *strtok(char *str,const char *delimiters)</td>
+<td style="text-align:left">利用delimiters字符串中的字符分解字符串str</td>
+<td style="text-align:left">返回分隔符之前的字符串，如果没有可分解的字符串，返回NULL</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th style="text-align:left">函数原型</th>
+<th style="text-align:left">函数功能</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">memset</td>
+<td style="text-align:left">void *memset(void *buf,int value,unsigned count)</td>
+<td style="text-align:left">将buf指向的字符串中前count个字节设置成value</td>
+<td style="text-align:left">返回填充后的字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">strlen</td>
+<td style="text-align:left">unsigned strlen(const char *str)</td>
+<td style="text-align:left">求以空字符结尾的字符串str的长度</td>
+<td style="text-align:left">返回字符串的长度</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/04/c_c++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="prev" title="c/c++基础知识">
+      <i class="fa fa-chevron-left"></i> c/c++基础知识
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#c常用函数"><span class="nav-number">1.</span> <span class="nav-text">c常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">blah blah blah
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符输入输出函数"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符输入输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据块输入-输出函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据块输入&#x2F;输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式化输入-输出函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">格式化输入&#x2F;输出函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#printf"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">printf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scanf"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">scanf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sprintf"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">sprintf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sscanf"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">sscanf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他的文件输入输出函数"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">其他的文件输入输出函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-number">1.2.</span> <span class="nav-text">ctype.h函数库
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-2"><span class="nav-number">1.3.</span> <span class="nav-text">string.h函数库
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串比较函数"><span class="nav-number">1.3.1.</span> <span class="nav-text">字符串比较函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串复制函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">字符串复制函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串连接函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">字符串连接函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串查找函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">字符串查找函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">其他函数</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Xdong-Liu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xdong-Liu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
