@@ -54,7 +54,7 @@
 <meta property="og:description" content="c常用函数">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-04T08:03:09.000Z">
-<meta property="article:modified_time" content="2020-01-10T08:18:32.931Z">
+<meta property="article:modified_time" content="2020-01-10T12:31:27.981Z">
 <meta property="article:author" content="Xdong-Liu">
 <meta name="twitter:card" content="summary">
 
@@ -200,7 +200,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-10 16:18:32" itemprop="dateModified" datetime="2020-01-10T16:18:32+08:00">2020-01-10</time>
+                <time title="修改时间：2020-01-10 20:31:27" itemprop="dateModified" datetime="2020-01-10T20:31:27+08:00">2020-01-10</time>
               </span>
 
           
@@ -309,7 +309,7 @@
 </table>
 </div>
 <hr>
-<h4 id="1-3-格式化输入-输出函数"><a href="#1-3-格式化输入-输出函数" class="headerlink" title="1.3 格式化输入/输出函数"></a>1.3 格式化输入/输出函数</h4><h5 id="printf"><a href="#printf" class="headerlink" title="printf"></a><p style="color:#FF6EB4">printf</p></h5><div class="table-container">
+<h4 id="1-3-格式化输入-输出函数"><a href="#1-3-格式化输入-输出函数" class="headerlink" title="1.3 格式化输入/输出函数"></a>1.3 格式化输入/输出函数</h4><h5 id="1-3-1-printf"><a href="#1-3-1-printf" class="headerlink" title="1.3.1 printf"></a><p style="color:#FF6EB4">1.3.1 printf</p></h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -425,10 +425,10 @@
 </tbody>
 </table>
 </div>
-<h5 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a><p style="color:#FF6EB4">scanf</p></h5><blockquote>
+<h5 id="1-3-2-scanf"><a href="#1-3-2-scanf" class="headerlink" title="1.3.2 scanf"></a><p style="color:#FF6EB4">1.3.2 scanf</p></h5><blockquote>
 <p>参考printf参数</p>
 </blockquote>
-<h5 id="sprintf"><a href="#sprintf" class="headerlink" title="sprintf"></a><p style="color:#FF6EB4">sprintf</p></h5><div class="table-container">
+<h5 id="1-3-3-sprintf"><a href="#1-3-3-sprintf" class="headerlink" title="1.3.3 sprintf"></a><p style="color:#FF6EB4">1.3.3 sprintf</p></h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -480,7 +480,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> a[<span class="number">10</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sprintf</span>(a, <span class="string">"%d"</span>, <span class="number">123</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sprintf</span>(a, <span class="string">"%4d%4d"</span>, <span class="number">123</span>, <span class="number">4567</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sprintf</span>(a, <span class="string">"%-4d%4d"</span>, <span class="number">123</span>, <span class="number">4567</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sprintf</span>(a,<span class="string">"%x"</span>,<span class="number">13</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
-<h5 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf"></a><p style="color:#FF6EB4">sscanf</p></h5><div class="table-container">
+<h5 id="1-3-4-sscanf"><a href="#1-3-4-sscanf" class="headerlink" title="1.3.4 sscanf"></a><p style="color:#FF6EB4">1.3.4 sscanf</p></h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -499,30 +499,90 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> buf[<span class="number">100</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sscanf</span>(<span class="string">"123456 "</span>, <span class="string">"%s"</span>, buf);<span class="comment">//一般用法，将字符串123456放入字符串buf中 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(buf);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sscanf</span>(<span class="string">"123456 "</span>, <span class="string">"%4s"</span>, buf);<span class="comment">//截取一部分字符串 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(buf);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sscanf</span>(<span class="string">"123456 abcdedf"</span>, <span class="string">"%[^ ]"</span>, buf);<span class="comment">//截取以空格为止的字符串</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(buf); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sscanf</span>(<span class="string">"123456abcdedfBCDEF"</span>, <span class="string">"%[1-9a-z]"</span>, buf);<span class="comment">//仅包含1-9和a-z的字符串 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(buf);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">sscanf</span>(<span class="string">"hello, world"</span>, <span class="string">"%*s%s"</span>, buf);<span class="comment">//*表示过滤掉此匹配项 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">puts</span>(buf); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
-<h5 id="其他的文件输入输出函数"><a href="#其他的文件输入输出函数" class="headerlink" title="其他的文件输入输出函数"></a>其他的文件输入输出函数</h5><div class="table-container">
+<h4 id="1-4其他函数"><a href="#1-4其他函数" class="headerlink" title="1.4其他函数"></a>1.4其他函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
 <th style="text-align:left">函数名</th>
 <th style="text-align:left">功能</th>
+<th>类别</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">fprintf</td>
 <td style="text-align:left">输出格式化数据到文件中</td>
+<td>输入输出</td>
 </tr>
 <tr>
 <td style="text-align:left">fscanf</td>
 <td style="text-align:left">从文件中读取格式化数据</td>
+<td>输入输出</td>
 </tr>
 <tr>
 <td style="text-align:left">vprintf</td>
 <td style="text-align:left">在屏幕上输出格式化变长参数列表中的数据</td>
+<td>输入输出</td>
 </tr>
 <tr>
 <td style="text-align:left">vfprintf</td>
 <td style="text-align:left">输出格式化数据到文件中</td>
+<td>输入输出</td>
+</tr>
+<tr>
+<td style="text-align:left">fopen</td>
+<td style="text-align:left">打开文件</td>
+<td>文件存取操作</td>
+</tr>
+<tr>
+<td style="text-align:left">fclose</td>
+<td style="text-align:left">关闭文件</td>
+<td>文件存取操作</td>
+</tr>
+<tr>
+<td style="text-align:left">fflush</td>
+<td style="text-align:left">将缓冲区的文件写入文件</td>
+<td>文件存取操作</td>
+</tr>
+<tr>
+<td style="text-align:left">remove</td>
+<td style="text-align:left">删除文件</td>
+<td>文件存取操作</td>
+</tr>
+<tr>
+<td style="text-align:left">rename</td>
+<td style="text-align:left">重命名文件</td>
+<td>文件存取操作</td>
+</tr>
+<tr>
+<td style="text-align:left">fseek</td>
+<td style="text-align:left">移动文件位置指针到指定位置</td>
+<td>文件定位函数</td>
+</tr>
+<tr>
+<td style="text-align:left">ftell</td>
+<td style="text-align:left">得到文件位置指针的当前值</td>
+<td>文件定位函数</td>
+</tr>
+<tr>
+<td style="text-align:left">rewind</td>
+<td style="text-align:left">将文件位置指针移动到文件的开头</td>
+<td>文件定位函数</td>
+</tr>
+<tr>
+<td style="text-align:left">clearerr</td>
+<td style="text-align:left">清楚文件中的错误标志</td>
+<td>文件错误控制函数</td>
+</tr>
+<tr>
+<td style="text-align:left">feof</td>
+<td style="text-align:left">是否到达了文件尾</td>
+<td>文件错误控制函数</td>
+</tr>
+<tr>
+<td style="text-align:left">ferror</td>
+<td style="text-align:left">检查文件操作是否出现了错误</td>
+<td>文件错误控制函数</td>
 </tr>
 </tbody>
 </table>
@@ -817,17 +877,19 @@
 <tr>
 <td style="text-align:left">strtod</td>
 <td style="text-align:left">double strtod(const char *str,char **endptr</td>
-<td style="text-align:left">将字符串str转换成对应的双精度数据，(跳过空格)</td>
+<td style="text-align:left">跳过str指向的字符串中的空白字符，把后续字符都转换成浮点型。</td>
 <td style="text-align:left">若转换成功，则返回相应双精度浮点数，失败返回0.0，超范围返回正德或负的HUGE_VAL</td>
 </tr>
 <tr>
 <td style="text-align:left">strtol</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">long int strtol(const char* str,char** endptr,int base)</td>
+<td style="text-align:left">跳过str指向的字符串中的空白字符，把后续字符都转换成长整型。</td>
+<td style="text-align:left">返回转换后的长整型数，失败返回0，超范围返回LONG_MAX或LONG_MIN。</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p><strong>上述范例：</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> a[]=<span class="string">"12.2"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> b[]=<span class="string">"23"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> c[]=<span class="string">"12.4 34.5"</span>,*pc;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> d[]=<span class="string">"12 345 90"</span>,*pd;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"a数组内容：%.2lf\n"</span>,atof(a));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"b数组内容：%d\n"</span>,atoi(b));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"c数组内容："</span>); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	pc=c;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">do</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.0lf "</span>,strtod(pc,&amp;pc));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">	&#125;<span class="keyword">while</span>(*pc); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nd数组内容："</span>); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	pd=d;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">do</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,strtol(pd,&amp;pd,<span class="number">16</span>));<span class="comment">//第三个参数表明字符串里的进制数，转换为10进制 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	&#125;<span class="keyword">while</span>(*pd);                        <span class="comment">//这里将字符串里当作16进制转换成10进制 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
 <h4 id="4-2-动态内存管理函数"><a href="#4-2-动态内存管理函数" class="headerlink" title="4.2 动态内存管理函数"></a>4.2 动态内存管理函数</h4><div class="table-container">
 <table>
 <thead>
@@ -841,26 +903,27 @@
 <tbody>
 <tr>
 <td style="text-align:left">calloc</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">void *calloc(unsigned num,unsigned size)</td>
+<td style="text-align:left">分配内存空间</td>
+<td style="text-align:left">指向分配的内存空间指针，若失败返回NULL</td>
 </tr>
 <tr>
 <td style="text-align:left">free</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">void *free(void *ptr)</td>
+<td style="text-align:left">释放内存空间</td>
+<td style="text-align:left">无</td>
 </tr>
 <tr>
 <td style="text-align:left">malloc</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">void *malloc(unsigned size)</td>
+<td style="text-align:left">动态分配内存单元</td>
+<td style="text-align:left">指向分配的内存空间指针，若失败返回NULL</td>
 </tr>
 <tr>
 <td style="text-align:left">realloc</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">void *realloc(void *ptr,unsigned newsize)</td>
+<td style="text-align:left">重新分配内存单元</td>
+<td style="text-align:left">指向分配的内存空间指针，若失败返回NULL</td>
 </tr>
 </tbody>
 </table>
@@ -878,14 +941,15 @@
 <tbody>
 <tr>
 <td style="text-align:left">rand</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">int rand()</td>
+<td style="text-align:left">产生伪随机数</td>
+<td style="text-align:left">返回0~RAND_MAX</td>
 </tr>
 <tr>
 <td style="text-align:left">srand</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">void srand(unsigned seed)</td>
+<td style="text-align:left">初始化随机数发生器</td>
+<td style="text-align:left">无</td>
 </tr>
 </tbody>
 </table>
@@ -1000,6 +1064,8 @@
 </tbody>
 </table>
 </div>
+<p><strong>上述范例：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.1415926</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"sin30度为%.2lf\n"</span>,<span class="built_in">sin</span>(PI/<span class="number">6</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"cos60度为%.2lf\n"</span>,<span class="built_in">cos</span>(PI/<span class="number">3</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"tan45度为%.2lf\n"</span>,<span class="built_in">tan</span>(PI/<span class="number">4</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 <h4 id="5-2-指数和对数函数"><a href="#5-2-指数和对数函数" class="headerlink" title="5.2 指数和对数函数"></a>5.2 指数和对数函数</h4><div class="table-container">
 <table>
 <thead>
@@ -1013,24 +1079,26 @@
 <tbody>
 <tr>
 <td style="text-align:left">exp</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double exp(double x)</td>
+<td style="text-align:left">计算并返回<script type="math/tex">e^x</script></td>
+<td style="text-align:left"><script type="math/tex">e^x</script></td>
 </tr>
 <tr>
 <td style="text-align:left">log</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double log(double x)</td>
+<td style="text-align:left">计算并返回<script type="math/tex">\log_e ^x</script></td>
+<td style="text-align:left"><script type="math/tex">\log_e ^x</script></td>
 </tr>
 <tr>
 <td style="text-align:left">log10</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double log10(double x)</td>
+<td style="text-align:left">计算并返回<script type="math/tex">\log_{10} ^x</script></td>
+<td style="text-align:left"><script type="math/tex">\log_{10} ^x</script></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p><strong>上述范例：</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.1415926</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"e的一次方为%lf\n"</span>,<span class="built_in">exp</span>(<span class="number">1</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"底数为e真数为e^2的值为：%.2lf\n"</span>,<span class="built_in">log</span>(<span class="built_in">exp</span>(<span class="number">1</span>)*<span class="built_in">exp</span>(<span class="number">1</span>)));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"底数为10真数为100的值为：%.2lf\n"</span>,<span class="built_in">log10</span>(<span class="number">100</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
 <h4 id="5-3-幂指数和开方函数"><a href="#5-3-幂指数和开方函数" class="headerlink" title="5.3 幂指数和开方函数"></a>5.3 幂指数和开方函数</h4><div class="table-container">
 <table>
 <thead>
@@ -1044,14 +1112,15 @@
 <tbody>
 <tr>
 <td style="text-align:left">pow</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double pow(double base,double exp)</td>
+<td style="text-align:left">求以base为底exp为指数的<script type="math/tex">base^{exp}</script></td>
+<td style="text-align:left"><script type="math/tex">base^{exp}</script></td>
 </tr>
 <tr>
 <td style="text-align:left">sqrt</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double sqrt(double x)</td>
+<td style="text-align:left">求x的平方根</td>
+<td style="text-align:left">返回x的平方根</td>
 </tr>
 </tbody>
 </table>
@@ -1069,14 +1138,15 @@
 <tbody>
 <tr>
 <td style="text-align:left">abs</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">int abs(int x)</td>
+<td style="text-align:left">求整型x的绝对值</td>
+<td style="text-align:left">返回x的绝对值</td>
 </tr>
 <tr>
 <td style="text-align:left">fabs</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double(double x)</td>
+<td style="text-align:left">求浮点数x的绝对值</td>
+<td style="text-align:left">返回x的绝对值</td>
 </tr>
 </tbody>
 </table>
@@ -1094,139 +1164,94 @@
 <tbody>
 <tr>
 <td style="text-align:left">floor</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double floor(double x)</td>
+<td style="text-align:left">求不大于x的最大整数</td>
+<td style="text-align:left">返回不大于x的最大整数</td>
 </tr>
 <tr>
 <td style="text-align:left">fmod</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">double fmod(double x,double y)</td>
+<td style="text-align:left">求x/y的余数</td>
+<td style="text-align:left">返回余数</td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr>
-<h3 id="-5"><a href="#-5" class="headerlink" title=""></a><blockquote class="blockquote-center"><ol>
-<li>stdarg.h函数库</li>
-</ol>
+<h3 id="-5"><a href="#-5" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>6.stdarg.h函数库</p>
 </blockquote></h3><div class="table-container">
 <table>
 <thead>
 <tr>
 <th style="text-align:left">函数名</th>
-<th style="text-align:left">函数原型</th>
-<th style="text-align:left">函数功能</th>
-<th style="text-align:left">返回值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">va_arg</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">va_end</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">va_start</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr>
-<h3 id="-6"><a href="#-6" class="headerlink" title=""></a><blockquote class="blockquote-center"><ol>
-<li>time.h函数库</li>
-</ol>
-</blockquote></h3><h4 id="时间操作函数"><a href="#时间操作函数" class="headerlink" title="时间操作函数"></a>时间操作函数</h4><div class="table-container">
+<h3 id="-6"><a href="#-6" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>7.time.h函数库</p>
+</blockquote></h3><h4 id="7-1时间操作函数"><a href="#7-1时间操作函数" class="headerlink" title="7.1时间操作函数"></a>7.1时间操作函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
 <th style="text-align:left">函数名</th>
-<th style="text-align:left">函数原型</th>
-<th style="text-align:left">函数功能</th>
-<th style="text-align:left">返回值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">clock</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">difftime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">time</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
 </div>
-<h4 id="时间格式转换函数"><a href="#时间格式转换函数" class="headerlink" title="时间格式转换函数"></a>时间格式转换函数</h4><div class="table-container">
+<h4 id="7-2时间格式转换函数"><a href="#7-2时间格式转换函数" class="headerlink" title="7.2时间格式转换函数"></a>7.2时间格式转换函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
 <th style="text-align:left">函数名</th>
-<th style="text-align:left">函数原型</th>
-<th style="text-align:left">函数功能</th>
-<th style="text-align:left">返回值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">asctime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">ctime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">gmtime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">localtime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">mktime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">strftime</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr>
-<h2 id="c-常用类"><a href="#c-常用类" class="headerlink" title="c++常用类"></a><p style="text-align:center;color:red">c++常用类</p></h2><h3 id="-7"><a href="#-7" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>ios_base函数库</p>
+<h2 id="c-常用类"><a href="#c-常用类" class="headerlink" title="c++常用类"></a><p style="text-align:center;color:red">c++常用类</p></h2><h3 id="-7"><a href="#-7" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>1.ios_base函数库</p>
 </blockquote></h3><div class="table-container">
 <table>
 <thead>
@@ -1264,7 +1289,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="-8"><a href="#-8" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>iostream函数库</p>
+<h3 id="-8"><a href="#-8" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>2.iostream函数库</p>
 </blockquote></h3><div class="table-container">
 <table>
 <thead>
@@ -1326,8 +1351,8 @@
 </tbody>
 </table>
 </div>
-<h3 id="-9"><a href="#-9" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>string函数库</p>
-</blockquote></h3><h4 id="字符串运算符函数"><a href="#字符串运算符函数" class="headerlink" title="字符串运算符函数"></a>字符串运算符函数</h4><h5 id="字符串构造函数"><a href="#字符串构造函数" class="headerlink" title="字符串构造函数"></a>字符串构造函数</h5><div class="table-container">
+<h3 id="-9"><a href="#-9" class="headerlink" title=""></a><blockquote class="blockquote-center"><p>3.string函数库</p>
+</blockquote></h3><h4 id="3-1字符串构造函数"><a href="#3-1字符串构造函数" class="headerlink" title="3.1字符串构造函数"></a>3.1字符串构造函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1376,7 +1401,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(<span class="string">"hello world"</span>)</span></span>;          <span class="comment">//构造函数5 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">string</span> s2;                         <span class="comment">//构造函数1 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s3</span><span class="params">(s1)</span></span>;                     <span class="comment">//构造函数2 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(s1,<span class="number">2</span>,<span class="number">3</span>)</span></span>;                 <span class="comment">//构造函数3 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s5</span><span class="params">(<span class="string">"123456"</span>,<span class="number">3</span>)</span></span>;             <span class="comment">//构造函数4 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s6</span><span class="params">(<span class="string">"123 345"</span>)</span></span>;              <span class="comment">//构造函数5 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s7</span><span class="params">(<span class="number">10</span>,<span class="string">'c'</span>)</span></span>;                 <span class="comment">//构造函数6 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s8</span><span class="params">(s1.<span class="built_in">begin</span>(),s1.<span class="built_in">begin</span>()+<span class="number">3</span>)</span></span>;<span class="comment">//构造函数7 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"s1="</span>&lt;&lt;s1&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s2="</span>&lt;&lt;s2&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s3="</span>&lt;&lt;s3&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s4="</span>&lt;&lt;s4&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s5="</span>&lt;&lt;s5&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s6="</span>&lt;&lt;s6&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s7="</span>&lt;&lt;s7&lt;&lt;<span class="built_in">endl</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		&lt;&lt;<span class="string">"s8="</span>&lt;&lt;s8&lt;&lt;<span class="built_in">endl</span> ;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
-<h4 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h4><div class="table-container">
+<h4 id="3-2运算符函数"><a href="#3-2运算符函数" class="headerlink" title="3.2运算符函数"></a>3.2运算符函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1400,7 +1425,7 @@
 </tbody>
 </table>
 </div>
-<h4 id="字符串迭代器"><a href="#字符串迭代器" class="headerlink" title="字符串迭代器"></a>字符串迭代器</h4><div class="table-container">
+<h4 id="3-3字符串迭代器"><a href="#3-3字符串迭代器" class="headerlink" title="3.3字符串迭代器"></a>3.3字符串迭代器</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1439,7 +1464,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">"1234"</span>)</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">string</span>::iterator it;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">string</span>::reverse_iterator rit;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(it=s.<span class="built_in">begin</span>();it&lt;s.<span class="built_in">end</span>();it++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">cout</span>&lt;&lt;*it;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(rit=s.rbegin();rit&lt;s.rend();rit++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">cout</span>&lt;&lt;*rit;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
-<h4 id="字符串长度函数"><a href="#字符串长度函数" class="headerlink" title="字符串长度函数"></a>字符串长度函数</h4><div class="table-container">
+<h4 id="3-4字符串长度函数"><a href="#3-4字符串长度函数" class="headerlink" title="3.4字符串长度函数"></a>3.4字符串长度函数</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1495,7 +1520,7 @@
 </tbody>
 </table>
 </div>
-<h4 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h4><h5 id="insert函数"><a href="#insert函数" class="headerlink" title="insert函数"></a>insert函数</h5><div class="table-container">
+<h4 id="3-5字符串操作"><a href="#3-5字符串操作" class="headerlink" title="3.5字符串操作"></a>3.5字符串操作</h4><h5 id="3-5-1-nbsp-insert函数"><a href="#3-5-1-nbsp-insert函数" class="headerlink" title="3.5.1&nbsp;insert函数"></a>3.5.1&nbsp;insert函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1548,8 +1573,8 @@
 </tbody>
 </table>
 </div>
-<p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure></p>
-<h5 id="erase函数"><a href="#erase函数" class="headerlink" title="erase函数"></a>erase函数</h5><div class="table-container">
+<p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">string</span> str1=<span class="string">"1111"</span>,str2=<span class="string">"2222"</span>,str3=<span class="string">"3333"</span>,str4=<span class="string">"4444"</span>,str5=<span class="string">"5555"</span>,str6=<span class="string">"6666"</span>,str7=<span class="string">"7777"</span>,str8=<span class="string">"8888"</span>,str=<span class="string">"000"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">char</span> a[]=<span class="string">"0000"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	str1.insert(<span class="number">1</span>,str2);<span class="comment">//插入函数1 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	str2.insert(<span class="number">2</span>,str3,<span class="number">2</span>,<span class="number">2</span>);<span class="comment">//插入函数2 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	str3.insert(<span class="number">2</span>,a,<span class="number">2</span>);     <span class="comment">//插入函数3 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	str4.insert(<span class="number">2</span>,a);        <span class="comment">//插入函数4 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	str5.insert(<span class="number">2</span>,<span class="number">3</span>,<span class="string">'s'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	str6.insert(str6.<span class="built_in">begin</span>(),<span class="string">'c'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	str7.insert(str7.<span class="built_in">begin</span>(),<span class="number">3</span>,<span class="string">'c'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	str8.insert(str8.<span class="built_in">begin</span>(),str7.<span class="built_in">begin</span>(),str7.<span class="built_in">begin</span>()+<span class="number">2</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"str1的内容"</span>&lt;&lt;str1&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str2的内容"</span>&lt;&lt;str2&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str3的内容"</span>&lt;&lt;str3&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str4的内容"</span>&lt;&lt;str4&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str5的内容"</span>&lt;&lt;str5&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str6的内容"</span>&lt;&lt;str6&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str7的内容"</span>&lt;&lt;str7&lt;&lt;<span class="built_in">endl</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	    &lt;&lt;<span class="string">"str8的内容"</span>&lt;&lt;str8&lt;&lt;<span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></p>
+<h5 id="3-5-2-nbsp-erase函数"><a href="#3-5-2-nbsp-erase函数" class="headerlink" title="3.5.2&nbsp;erase函数"></a>3.5.2&nbsp;erase函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1578,7 +1603,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure></p>
-<h5 id="replace函数"><a href="#replace函数" class="headerlink" title="replace函数"></a>replace函数</h5><div class="table-container">
+<h5 id="3-5-3-nbsp-replace函数"><a href="#3-5-3-nbsp-replace函数" class="headerlink" title="3.5.3&nbsp;replace函数"></a>3.5.3&nbsp;replace函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1641,7 +1666,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure></p>
-<h5 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h5><div class="table-container">
+<h5 id="3-5-4-nbsp-find函数"><a href="#3-5-4-nbsp-find函数" class="headerlink" title="3.5.4&nbsp;find函数"></a>3.5.4&nbsp;find函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1680,7 +1705,7 @@
 </table>
 </div>
 <p><strong>上述范例：</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure></p>
-<h5 id="find-first-of和find-last-of函数"><a href="#find-first-of和find-last-of函数" class="headerlink" title="find_first_of和find_last_of函数"></a>find_first_of和find_last_of函数</h5><div class="table-container">
+<h5 id="3-5-5-nbsp-find-first-of和find-last-of函数"><a href="#3-5-5-nbsp-find-first-of和find-last-of函数" class="headerlink" title="3.5.5&nbsp;find_first_of和find_last_of函数"></a>3.5.5&nbsp;find_first_of和find_last_of函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1741,7 +1766,7 @@
 </tbody>
 </table>
 </div>
-<h5 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h5><div class="table-container">
+<h5 id="3-5-6-nbsp-其他函数"><a href="#3-5-6-nbsp-其他函数" class="headerlink" title="3.5.6&nbsp;其他函数"></a>3.5.6&nbsp;其他函数</h5><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1859,20 +1884,16 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#c常用函数"><span class="nav-text">c常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-text">1.stdio.h函数库
-</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-字符输入输出函数"><span class="nav-text">1.1 字符输入输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-数据块输入-输出函数"><span class="nav-text">1.2 数据块输入&#x2F;输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-格式化输入-输出函数"><span class="nav-text">1.3 格式化输入&#x2F;输出函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#printf"><span class="nav-text">printf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scanf"><span class="nav-text">scanf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sprintf"><span class="nav-text">sprintf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sscanf"><span class="nav-text">sscanf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他的文件输入输出函数"><span class="nav-text">其他的文件输入输出函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-text">2.ctype.h函数库
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-字符输入输出函数"><span class="nav-text">1.1 字符输入输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-数据块输入-输出函数"><span class="nav-text">1.2 数据块输入&#x2F;输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-格式化输入-输出函数"><span class="nav-text">1.3 格式化输入&#x2F;输出函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-printf"><span class="nav-text">1.3.1 printf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-2-scanf"><span class="nav-text">1.3.2 scanf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-3-sprintf"><span class="nav-text">1.3.3 sprintf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-4-sscanf"><span class="nav-text">1.3.4 sscanf</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4其他函数"><span class="nav-text">1.4其他函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-text">2.ctype.h函数库
 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-2"><span class="nav-text">3.string.h函数库
 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-字符串比较函数"><span class="nav-text">3.1 字符串比较函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-字符串复制函数"><span class="nav-text">3.2 字符串复制函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-字符串连接函数"><span class="nav-text">3.3 字符串连接函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-字符串查找函数"><span class="nav-text">3.4 字符串查找函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-其他函数"><span class="nav-text">3.5 其他函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-3"><span class="nav-text">4.stdlib.h函数库
 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1字符串转换函数"><span class="nav-text">4.1字符串转换函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-动态内存管理函数"><span class="nav-text">4.2 动态内存管理函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-随机数生成函数"><span class="nav-text">4.3 随机数生成函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-查找和排序函数"><span class="nav-text">4.4 查找和排序函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-过程控制函数"><span class="nav-text">4.5 过程控制函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-4"><span class="nav-text">5.math.h函数库
-</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-三角函数"><span class="nav-text">5.1 三角函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-指数和对数函数"><span class="nav-text">5.2 指数和对数函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-幂指数和开方函数"><span class="nav-text">5.3 幂指数和开方函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-绝对值函数"><span class="nav-text">5.4 绝对值函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5-其他函数"><span class="nav-text">5.5 其他函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-5"><span class="nav-text">
-stdarg.h函数库
-
-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-6"><span class="nav-text">
-time.h函数库
-
-</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间操作函数"><span class="nav-text">时间操作函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间格式转换函数"><span class="nav-text">时间格式转换函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-常用类"><span class="nav-text">c++常用类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-7"><span class="nav-text">ios_base函数库
-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-8"><span class="nav-text">iostream函数库
-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-9"><span class="nav-text">string函数库
-</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串运算符函数"><span class="nav-text">字符串运算符函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串构造函数"><span class="nav-text">字符串构造函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符函数"><span class="nav-text">运算符函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串迭代器"><span class="nav-text">字符串迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串长度函数"><span class="nav-text">字符串长度函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串操作"><span class="nav-text">字符串操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#insert函数"><span class="nav-text">insert函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#erase函数"><span class="nav-text">erase函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#replace函数"><span class="nav-text">replace函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#find函数"><span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#find-first-of和find-last-of函数"><span class="nav-text">find_first_of和find_last_of函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他函数"><span class="nav-text">其他函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-三角函数"><span class="nav-text">5.1 三角函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-指数和对数函数"><span class="nav-text">5.2 指数和对数函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-幂指数和开方函数"><span class="nav-text">5.3 幂指数和开方函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-绝对值函数"><span class="nav-text">5.4 绝对值函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5-其他函数"><span class="nav-text">5.5 其他函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-5"><span class="nav-text">6.stdarg.h函数库
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-6"><span class="nav-text">7.time.h函数库
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1时间操作函数"><span class="nav-text">7.1时间操作函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2时间格式转换函数"><span class="nav-text">7.2时间格式转换函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-常用类"><span class="nav-text">c++常用类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-7"><span class="nav-text">1.ios_base函数库
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-8"><span class="nav-text">2.iostream函数库
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-9"><span class="nav-text">3.string函数库
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1字符串构造函数"><span class="nav-text">3.1字符串构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2运算符函数"><span class="nav-text">3.2运算符函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3字符串迭代器"><span class="nav-text">3.3字符串迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4字符串长度函数"><span class="nav-text">3.4字符串长度函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5字符串操作"><span class="nav-text">3.5字符串操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-1-nbsp-insert函数"><span class="nav-text">3.5.1 insert函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-2-nbsp-erase函数"><span class="nav-text">3.5.2 erase函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3-nbsp-replace函数"><span class="nav-text">3.5.3 replace函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-4-nbsp-find函数"><span class="nav-text">3.5.4 find函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-nbsp-find-first-of和find-last-of函数"><span class="nav-text">3.5.5 find_first_of和find_last_of函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-6-nbsp-其他函数"><span class="nav-text">3.5.6 其他函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1976,6 +1997,54 @@ time.h函数库
   
 
   
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
 
   
 
